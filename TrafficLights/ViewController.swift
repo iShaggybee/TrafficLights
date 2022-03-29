@@ -14,17 +14,13 @@ enum LightState {
 }
 
 class ViewController: UIViewController {
-    var currentLightState: LightState?
-    
     @IBOutlet var redLight: UIView!
     @IBOutlet var orangeLight: UIView!
     @IBOutlet var greenLight: UIView!
     @IBOutlet var lightsContainer: UIStackView!
     @IBOutlet var actionButton: UIButton!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+
+    private var currentLightState: LightState?
     
     override func viewDidLayoutSubviews() {
         lightsContainer.layer.borderColor = UIColor.black.cgColor
@@ -36,7 +32,7 @@ class ViewController: UIViewController {
         }
     }
  
-    @IBAction func onChangeLight(_ sender: Any) {
+    @IBAction func onChangeLight() {
         actionButton.setTitle("Next", for: .normal)
         
         switch currentLightState {

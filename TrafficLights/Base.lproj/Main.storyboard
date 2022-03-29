@@ -13,61 +13,64 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8n-Ne-Ng9">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-3E-nDy">
+                                <rect key="frame" x="109" y="114" width="196" height="596"/>
+                                <subviews>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-yt-Ps4">
+                                        <rect key="frame" x="8" y="8" width="180" height="180"/>
+                                        <color key="backgroundColor" red="0.95928315829999999" green="0.2122091972" blue="0.17526777569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="HbO-yt-Ps4" secondAttribute="height" multiplier="1:1" id="BCp-XO-gn7"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-SS-on2">
+                                        <rect key="frame" x="8" y="208" width="180" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="dWa-SS-on2" secondAttribute="height" multiplier="1:1" id="iWy-6d-Pgz"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDv-MF-tfY">
+                                        <rect key="frame" x="8" y="408" width="180" height="180"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eDv-MF-tfY" secondAttribute="height" multiplier="1:1" id="qdf-Eb-bzT"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gd0-fK-Ftg">
                                 <rect key="frame" x="162" y="782" width="90" height="46"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="m5G-l9-Cnn"/>
+                                    <constraint firstAttribute="height" constant="46" id="Pvr-3K-Z1V"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="h5Q-sq-clV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="onChangeLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z3G-qh-bYs"/>
+                                    <action selector="onChangeLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTg-CL-dv6"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-3E-nDy">
-                                <rect key="frame" x="109" y="144" width="196" height="584"/>
-                                <subviews>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-yt-Ps4">
-                                        <rect key="frame" x="8" y="8" width="180" height="176"/>
-                                        <color key="backgroundColor" red="0.95928315829999999" green="0.2122091972" blue="0.17526777569999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-SS-on2">
-                                        <rect key="frame" x="8" y="204" width="180" height="176"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                    </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDv-MF-tfY">
-                                        <rect key="frame" x="8" y="400" width="180" height="176"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="eDv-MF-tfY" firstAttribute="height" secondItem="dWa-SS-on2" secondAttribute="height" id="0cd-hb-672"/>
-                                    <constraint firstItem="HbO-yt-Ps4" firstAttribute="height" secondItem="dWa-SS-on2" secondAttribute="height" id="e4S-tZ-ocm"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y8n-Ne-Ng9" secondAttribute="bottom" constant="34" id="37k-Wg-RsV"/>
-                            <constraint firstItem="vZo-3E-nDy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DoB-ew-URM"/>
-                            <constraint firstItem="vZo-3E-nDy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Q9Z-qO-Hvn"/>
-                            <constraint firstItem="y8n-Ne-Ng9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SPa-uy-Byt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vZo-3E-nDy" secondAttribute="trailing" constant="109" id="bCK-UT-TK3"/>
-                            <constraint firstItem="y8n-Ne-Ng9" firstAttribute="top" secondItem="eDv-MF-tfY" secondAttribute="bottom" constant="62" id="wOk-Ph-9Xd"/>
-                            <constraint firstItem="vZo-3E-nDy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="zoe-BO-fbH"/>
+                            <constraint firstItem="vZo-3E-nDy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hk-Jl-EA3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gd0-fK-Ftg" secondAttribute="bottom" constant="34" id="4MI-68-b0o"/>
+                            <constraint firstItem="vZo-3E-nDy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.665179" id="J2V-KB-Obt"/>
+                            <constraint firstItem="vZo-3E-nDy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="Nvd-Z8-5gs"/>
+                            <constraint firstItem="gd0-fK-Ftg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W20-Ik-fo5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="y8n-Ne-Ng9" id="hxQ-kT-2QE"/>
+                        <outlet property="actionButton" destination="gd0-fK-Ftg" id="Syc-U6-U42"/>
                         <outlet property="greenLight" destination="eDv-MF-tfY" id="vwa-L0-KTG"/>
                         <outlet property="lightsContainer" destination="vZo-3E-nDy" id="HAC-Uv-ZcI"/>
                         <outlet property="orangeLight" destination="dWa-SS-on2" id="oa7-iv-o3P"/>
